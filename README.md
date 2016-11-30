@@ -5,9 +5,7 @@ This is a forked blog application to test the pg search engine.
 You will need to do a few things to set up the pg search engine.
 
 1. First create a new rails app.
-  * ```
-    $ rails new myapp -d postgresql
-    ```
+    ```$ rails new myapp -d postgresql```
 
 2. Now you will need to add postgres extensions to your databases for function support
     ``` rails g migration add_contrib_extensions ```
