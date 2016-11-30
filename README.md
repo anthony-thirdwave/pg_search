@@ -33,7 +33,7 @@ You will need to do a few things to set up the pg search engine.
     =# \q # to quit out of psql
     ```
 
-3. You will also need to format your schema to sql
+3. You will also need to use an sql schema for postgres. 
   * In your ```config/application.rb``` file add this code:
 
      ```ruby
