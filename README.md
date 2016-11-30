@@ -19,9 +19,23 @@ You will need to do a few things to set up the pg search engine.
     end
     ```
 
+    ##### Sometimes the above migration will not work and will throw "missing function" errors later in the code. You will have to create the extensions manually in postgres for each database to prevent those errors.
+
+    ```
+    $ psql database_development
+    =# CREATE EXTENSION pg_trgm;
+    =# CREATE EXTENSION fuzzystrmatch;
+    =# \q # to quit out of psql
+
+    $ psql database_test
+    =# CREATE EXTENSION pg_trgm;
+    =# CREATE EXTENSION fuzzystrmatch;
+    =# \q # to quit out of psql
+    ```
+
 3. You will also need to format your schema to sql
   * In your ```config/application.rb``` file add this code:
-  
+
      ```ruby
      config.active_record.schema_format = :sql
      ```
@@ -76,4 +90,5 @@ You will need to do a few things to set up the pg search engine.
   ```ruby
   search = PgSearch.multisearch 'stork'
   search.map { |s| s.searchable.title }.inspect
+  search.map { |s| s.searchable.title }.inspect # => "[\"Jon Snow\", \"Arya Stark\"]"
   ```
