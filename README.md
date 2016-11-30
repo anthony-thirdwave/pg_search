@@ -20,7 +20,11 @@ You will need to do a few things to set up the pg search engine.
     ```
 
 3. You will also need to format your schema to sql
-  * In your ```config/application.rb``` file add this code: ```config.active_record.schema_format = :sql```
+  * In your ```config/application.rb``` file add this code:
+  
+     ```ruby
+     config.active_record.schema_format = :sql
+     ```
 
 4. Add ```ruby gem 'pg_search'``` do your gemfile
 
