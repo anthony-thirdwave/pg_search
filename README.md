@@ -40,7 +40,7 @@ You will need to do a few things to set up the pg search engine.
      config.active_record.schema_format = :sql
      ```
 
-4. Add ```ruby gem 'pg_search'``` do your gemfile
+4. Add ```gem 'pg_search'``` do your gemfile
 
 5. Run bundle.
 
