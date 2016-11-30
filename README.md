@@ -7,6 +7,7 @@ You will need to do a few things to set up the pg search engine.
   * ```
     $ rails new myapp -d postgresql
     ```
+
 2. Now you will need to add postgres extensions to your databases for function support
   * ```
     rails g migration add_contrib_extensions
@@ -19,6 +20,7 @@ You will need to do a few things to set up the pg search engine.
       end
     end
     ```
+
 3. You will also need to format your schema to sql
   * In your ```config/application.rb``` file add this code: ```ruby config.active_record.schema_format = :sql```
 
