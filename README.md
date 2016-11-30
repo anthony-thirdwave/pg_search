@@ -33,7 +33,7 @@ You will need to do a few things to set up the pg search engine.
     =# \q # to quit out of psql
     ```
 
-3. You will also need to use an sql schema for postgres. 
+3. You will also need to use an sql schema for postgres.
   * In your ```config/application.rb``` file add this code:
 
      ```ruby
@@ -89,6 +89,5 @@ You will need to do a few things to set up the pg search engine.
 
   ```ruby
   search = PgSearch.multisearch 'stork'
-  search.map { |s| s.searchable.title }.inspect
   search.map { |s| s.searchable.title }.inspect # => "[\"Jon Snow\", \"Arya Stark\"]"
   ```
