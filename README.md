@@ -7,7 +7,9 @@ You will need to do a few things to set up the pg search engine.
 1. First create a new rails app.
     ```$ rails new myapp -d postgresql```
 
-2. Now you will need to add postgres extensions to your databases for function support
+2. Create your databases with ``` $ bundle exec rake db:create```
+
+    Now you will need to add postgres extensions to your databases for function support
     ``` rails g migration add_contrib_extensions ```
 
     ```ruby
@@ -51,8 +53,8 @@ You will need to do a few things to set up the pg search engine.
     $ rails g pg_search:migration:multisearch
     ```
 
-7. Create and migrate
-  ```$ bundle exec rake db:create; bundle exec rake db:migrate```
+7. Migrate the database
+  ``` $ bundle exec rake db:migrate```
 
 8. Configure the model(s)
 
