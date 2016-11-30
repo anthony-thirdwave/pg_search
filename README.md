@@ -10,7 +10,7 @@ You will need to do a few things to set up the pg search engine.
     ```
 
 2. Now you will need to add postgres extensions to your databases for function support
-  * ```
+    ```
     rails g migration add_contrib_extensions
     ```
 
