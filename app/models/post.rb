@@ -1,8 +1,6 @@
 class Post < ActiveRecord::Base
   include PgSearch
-  pg_search_scope :custom_search,
-                  :against => :title,
-                  :using => :trigram
+  multisearchable against: [:title, :body]
 end
 
 
